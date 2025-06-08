@@ -33,11 +33,13 @@ def get_avg_grade():
 def get_highest_grade():
     max = grades[0]
     name = names[0]
+
     for i in range(number_of_students):
         if grades[i] > max:
             max = grades[i]
-            name = names[i]
-    print("-> Stundent",name,"has the highest grade:",str(max), "\n")
+    for i in range(number_of_students):
+        if grades[i] == max:
+            print("-> Stundent",names[i],"has the highest grade:",str(max), "\n")
 
 def count_passed():
     count = 0
