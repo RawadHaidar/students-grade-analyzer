@@ -8,7 +8,9 @@ print("Please enter the names and grades of the students:")
 for i in range(number_of_students):
     
     print("Student", i + 1)
-    name = input("Enter student name: ")
+    first_name = input("Enter student's first name: ").capitalize()
+    last_name = input("Enter student's last name: ").capitalize()
+    name = first_name + " " + last_name
     names.append(name)
     while True:
         grade = float(input("Enter the student's grade: "))
